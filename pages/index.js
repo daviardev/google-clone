@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
+import Search from '@/components/Search'
 import Header from '@/components/Header'
 
 export default function Home () {
@@ -13,6 +15,17 @@ export default function Home () {
       </Head>
 
       <Header />
+
+      <div className='flex flex-col items-center mt-24'>
+        <Image
+          src='/logo.webp'
+          alt='Logo google'
+          width={300}
+          height={100}
+        />
+
+        <Search />
+      </div>
     </>
   )
 }
