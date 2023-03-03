@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 
@@ -53,9 +54,11 @@ export default function Search () {
         <button disabled={randomSearchLoading} onClick={randomSearch} className='btn flex items-center justify-center disabled:opacity-80'>
           {randomSearchLoading
             ? (
-              <img
+              <Image
                 src='/spinner.svg'
                 alt='loading...'
+                width={100}
+                height={100}
                 className='h-6 text-center justify-center'
               />
               )
